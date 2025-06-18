@@ -1,618 +1,593 @@
-#' General Social Survey data, 2016
+#' 일반 사회 조사 데이터, 2016
 #'
-#' A dataset containing an extract from the 2016 General Social
-#' Survey. See http://gss.norc.org/Get-Documentation for full
-#' documentation of the variables.
+#' 2016년 일반 사회 조사에서 발췌한 데이터 세트입니다.
+#' 변수에 대한 전체 문서는 http://gss.norc.org/Get-Documentation을 참조하십시오.
 #'
 #' \itemize{
-#' \item year. gss year for this respondent.
-#' \item id. respondent id number.
-#' \item ballot. ballot used for interview.
-#' \item age. age of respondent.
-#' \item childs. number of children.
-#' \item sibs. number of brothers and sisters.
-#' \item degree. Rs highest degree.
-#' \item race. race of respondent.
-#' \item sex. respondent's sex.
-#' \item region. region of interview.
-#' \item income16. total family income.
-#' \item relig. rs religious preference.
-#' \item marital. marital status.
-#' \item padeg. fathers highest degree.
-#' \item madeg. mothers highest degree.
-#' \item partyid. political party affiliation.
-#' \item polviews. think of self as liberal or conservative.
-#' \item happy. general happiness.
-#' \item partners. how many sex partners r had in last year.
-#' \item grass. should marijuana be made legal.
-#' \item zodiac. respondents astrological sign.
-#' \item pres12. raw variable for whether the Respondent voted for
-#' Obama. Recoded to obama in this dataset.
-#' \item wtssall. weight variable.
-#' \item income_rc. Recoded income variable.
-#' \item agegrp. Age variable recoded into age categories
-#' \item ageq. Age recoded into quartiles.
-#' \item siblings. Top-coded sibs variable.
-#' \item kids. Top-coded childs variable.
-#' \item bigregion. Region variable (Census divisions) recoded to four Census regions.
-#' \item religion. relig variable recoded to six categories.
-#' \item partners_rc. partners variable recoded to five categories.
-#' \item obama. Respondent says the voted for Obama in 2012. 1 = yes;
-#' 0 = all other non-design options (Romney, other candidate, did not
-#' vote, refused, etc.)
+#' \item year. 이 응답자의 gss 연도.
+#' \item id. 응답자 ID 번호.
+#' \item ballot. 인터뷰에 사용된 투표용지.
+#' \item age. 응답자의 나이.
+#' \item childs. 자녀 수.
+#' \item sibs. 형제자매 수.
+#' \item degree. 응답자의 최종 학력.
+#' \item race. 응답자의 인종.
+#' \item sex. 응답자의 성별.
+#' \item region. 인터뷰 지역.
+#' \item income16. 총 가구 소득.
+#' \item relig. 응답자의 종교적 선호도.
+#' \item marital. 결혼 상태.
+#' \item padeg. 아버지의 최종 학력.
+#' \item madeg. 어머니의 최종 학력.
+#' \item partyid. 정당 소속.
+#' \item polviews. 자신을 진보 또는 보수로 생각하는지 여부.
+#' \item happy. 일반적인 행복감.
+#' \item partners. 작년에 응답자가 가진 성관계 파트너 수.
+#' \item grass. 마리화나를 합법화해야 하는지 여부.
+#' \item zodiac. 응답자의 별자리.
+#' \item pres12. 응답자가 오바마에게 투표했는지 여부에 대한 원시 변수입니다. 이 데이터 세트에서는 obama로 코딩 변경되었습니다.
+#' \item wtssall. 가중치 변수.
+#' \item income_rc. 코딩 변경된 소득 변수.
+#' \item agegrp. 연령 범주로 코딩 변경된 연령 변수.
+#' \item ageq. 사분위수로 코딩 변경된 연령.
+#' \item siblings. 상한 처리된 형제자매 변수.
+#' \item kids. 상한 처리된 자녀 변수.
+#' \item bigregion. 4개의 인구 조사 지역으로 코딩 변경된 지역 변수(인구 조사국).
+#' \item religion. 6개 범주로 코딩 변경된 종교 변수.
+#' \item partners_rc. 5개 범주로 코딩 변경된 파트너 변수.
+#' \item obama. 응답자는 2012년에 오바마에게 투표했다고 말합니다. 1 = 예;
+#' 0 = 기타 모든 비지정 옵션(롬니, 다른 후보, 투표하지 않음, 거부 등)
 #' }
 #'
 #' @docType data
 #' @keywords datasets
 #' @name gss_sm
-#' @format A data frame with 2538 rows and 26 variables.
+#' @format 2538개 행과 26개 변수가 있는 데이터 프레임입니다.
 #' @source National Opinion Research Center, http://gss.norc.org.
 "gss_sm"
 
 
-#' General Social Survey data, 1972-2016
+#' 일반 사회 조사 데이터, 1972-2016
 #'
-#' A dataset containing an extract from the General Social
-#' Survey. See http://gss.norc.org/Get-Documentation for full
-#' documentation of the variables. This data contains the same
-#' variables as `gss_sm`, but for all available years from 1972-2016.
+#' 일반 사회 조사에서 발췌한 데이터 세트입니다.
+#' 변수에 대한 전체 문서는 http://gss.norc.org/Get-Documentation을 참조하십시오. 이 데이터에는 `gss_sm`과 동일한
+#' 변수가 포함되어 있지만 1972년부터 2016년까지 사용 가능한 모든 연도에 대한 데이터입니다.
 #'
 #' \itemize{
-#' \item year. gss year for this respondent.
-#' \item id. respondent id number.
-#' \item ballot. ballot used for interview.
-#' \item age. age of respondent.
-#' \item degree. Rs highest degree.
-#' \item race. race of respondent.
-#' \item sex. respondent's sex.
-#' \item siblings. Number of brothers and sisters (recoded from SIBS).
-#' \item kids. Number of children (recoded from CHILDS).
-#' \item bigregion. region of interview (recoded from REGION).
-#' \item income16. total family income.
-#' \item religion. rs religious preference (recoded from RELIGION)
-#' \item marital. marital status.
-#' \item padeg. fathers highest degree.
-#' \item madeg. mothers highest degree.
-#' \item partyid. political party affiliation.
-#' \item polviews. think of self as liberal or conservative.
-#' \item happy. general happiness.
-#' \item partners_rc. how many sex partners r had in last year.
-#' (Recoded from PARTNERS)
-#' \item grass. should marijuana be made legal.
-#' \item zodiac. respondents astrological sign.
-#' \item pres12. R's stated vote in the 2012 Presidential election
-#' \item wtssall. weight variable.
-#' \item vpsu. Sampling unit
-#' \item vstrat. Stratification unit
+#' \item year. 이 응답자의 gss 연도.
+#' \item id. 응답자 ID 번호.
+#' \item ballot. 인터뷰에 사용된 투표용지.
+#' \item age. 응답자의 나이.
+#' \item degree. 응답자의 최종 학력.
+#' \item race. 응답자의 인종.
+#' \item sex. 응답자의 성별.
+#' \item siblings. 형제자매 수(SIBS에서 코딩 변경됨).
+#' \item kids. 자녀 수(CHILDS에서 코딩 변경됨).
+#' \item bigregion. 인터뷰 지역(REGION에서 코딩 변경됨).
+#' \item income16. 총 가구 소득.
+#' \item religion. 응답자의 종교적 선호도(RELIGION에서 코딩 변경됨)
+#' \item marital. 결혼 상태.
+#' \item padeg. 아버지의 최종 학력.
+#' \item madeg. 어머니의 최종 학력.
+#' \item partyid. 정당 소속.
+#' \item polviews. 자신을 진보 또는 보수로 생각하는지 여부.
+#' \item happy. 일반적인 행복감.
+#' \item partners_rc. 작년에 응답자가 가진 성관계 파트너 수.
+#' (PARTNERS에서 코딩 변경됨)
+#' \item grass. 마리화나를 합법화해야 하는지 여부.
+#' \item zodiac. 응답자의 별자리.
+#' \item pres12. 2012년 대통령 선거에서 응답자의 명시된 투표
+#' \item wtssall. 가중치 변수.
+#' \item vpsu. 표본 추출 단위
+#' \item vstrat. 층화 단위
 #' }
 #'
 #' @docType data
 #' @keywords datasets
 #' @name gss_lon
-#' @format A data frame with 62,366 rows and 26 variables.
+#' @format 62,366개 행과 26개 변수가 있는 데이터 프레임입니다.
 #' @source National Opinion Research Center, http://gss.norc.org.
 "gss_lon"
 
 
-#' General Social Survey data, 1972-2016
+#' 일반 사회 조사 데이터, 1972-2016
 #'
-#' A dataset containing an extract from the General Social
-#' Survey. See http://gss.norc.org/Get-Documentation for full
-#' documentation of the variables. This data contains seven
-#' variables from `gss_lon` with all NA values omitted.
+#' 일반 사회 조사에서 발췌한 데이터 세트입니다.
+#' 변수에 대한 전체 문서는 http://gss.norc.org/Get-Documentation을 참조하십시오. 이 데이터에는 `gss_lon`의 7개
+#' 변수가 포함되어 있으며 모든 NA 값은 생략되었습니다.
 #'
 #' \itemize{
-#' \item year. gss year for this respondent.
-#' \item id. respondent id number.
-#' \item age. age of respondent.
-#' \item race. race of respondent.
-#' \item sex. respondent's sex.
-#' \item siblings. Number of brothers and sisters (recoded from SIBS).
-#' \item kids. Number of children (recoded from CHILDS).
+#' \item year. 이 응답자의 gss 연도.
+#' \item id. 응답자 ID 번호.
+#' \item age. 응답자의 나이.
+#' \item race. 응답자의 인종.
+#' \item sex. 응답자의 성별.
+#' \item siblings. 형제자매 수(SIBS에서 코딩 변경됨).
+#' \item kids. 자녀 수(CHILDS에서 코딩 변경됨).
 #' }
 #'
 #' @docType data
 #' @keywords datasets
 #' @name gss_sib
-#' @format A data frame with 60,423 rows and 7 variables.
+#' @format 60,423개 행과 7개 변수가 있는 데이터 프레임입니다.
 #' @source National Opinion Research Center, http://gss.norc.org.
 "gss_sib"
 
-#' US Presidential Election 2016, State-level results
+#' 2016년 미국 대통령 선거, 주별 결과
 #'
-#' State-level vote totals and shares for the 2016 US Presidential election.
-#'  The variables are as follows:
+#' 2016년 미국 대통령 선거의 주별 투표 총계 및 득표율입니다.
+#'  변수는 다음과 같습니다.
 #' \itemize{
-#' \item state. State name.
-#' \item st. State abbreviation.
-#' \item fips. State FIPS code
-#' \item total_vote. Total votes cast.
-#' \item vote_margin. Winner's vote margin
-#' \item winner. Winning candidate.
-#' \item party. Winning party.
-#' \item pct_margin. Winner's percentage margin (of total vote)
-#' \item r_points. Percentage point difference between Trump % vote
-#'  share and Clinton % vote share
-#' \item d_points. Percentage point difference between Clinton % vote
-#'  share and Trump % vote share.
-#' \item pct_clinton. Clinton vote share (%)
-#' \item pct_trump. Trump vote share (%)
-#' \item pct_johnson. Johnson vote share (%)
-#' \item pct_other. Other vote share (%)
-#' \item clinton_vote. Clinton vote total
-#' \item trump_vote. Trump vote total
-#' \item johnson_vote. Johnson vote total
-#' \item other_vote. Other vote total
-#' \item ev_dem. Electoral votes for Clinton
-#' \item ev_rep. Electoral votes for Trump
-#' \item ev_oth. Electoral votes for Other
-#' \item census. Census region.
+#' \item state. 주 이름.
+#' \item st. 주 약어.
+#' \item fips. 주 FIPS 코드
+#' \item total_vote. 총 투표 수.
+#' \item vote_margin. 승자의 득표 차이
+#' \item winner. 당선된 후보.
+#' \item party. 당선된 정당.
+#' \item pct_margin. 승자의 득표율 차이(총 투표 수 대비)
+#' \item r_points. 트럼프 득표율과 클린턴 득표율 간의 백분율 포인트 차이
+#' \item d_points. 클린턴 득표율과 트럼프 득표율 간의 백분율 포인트 차이.
+#' \item pct_clinton. 클린턴 득표율(%)
+#' \item pct_trump. 트럼프 득표율(%)
+#' \item pct_johnson. 존슨 득표율(%)
+#' \item pct_other. 기타 득표율(%)
+#' \item clinton_vote. 클린턴 총 투표 수
+#' \item trump_vote. 트럼프 총 투표 수
+#' \item johnson_vote. 존슨 총 투표 수
+#' \item other_vote. 기타 총 투표 수
+#' \item ev_dem. 클린턴의 선거인단 투표 수
+#' \item ev_rep. 트럼프의 선거인단 투표 수
+#' \item ev_oth. 기타 후보의 선거인단 투표 수
+#' \item census. 인구 조사 지역.
 #'}
 #'
 #' @docType data
 #' @keywords datasets
 #' @name election
-#' @format A (tibble) data frame with 51 rows and 22 variables.
-#' @source Vote data from Dave Leip, US Election Atlas, http://uselectionatlas.org.
+#' @format 51개 행과 22개 변수가 있는 (tibble) 데이터 프레임입니다.
+#' @source Dave Leip의 투표 데이터, US Election Atlas, http://uselectionatlas.org.
 "election"
 
 
 
-#' US Presidential Election vote shares
+#' 미국 대통령 선거 득표율
 #'
-#' A dataset of US presidential elections from 1824 to 2016, with
-#'  information on the winner, runner up, and various measures of vote
-#'  share. Data for 2016 are provisional as of early December 2016.
-#'  The variables are as follows:
+#' 1824년부터 2016년까지의 미국 대통령 선거 데이터 세트로,
+#'  승자, 차점자 및 다양한 득표율 측정치에 대한 정보가 포함되어 있습니다.
+#'  2016년 데이터는 2016년 12월 초 기준 잠정 데이터입니다.
+#'  변수는 다음과 같습니다.
 #'
 #' \itemize{
-#' \item election. Number of the election counting from the first US
-#' presidential election. 1824 is the 10th election.
-#' \item year. Year.
-#' \item winner. Full name of winner.
-#' \item win_party. Party affiliation of winner.
-#' \item ec_pct. Winner's share of electoral college vote.
-#' (Range is 0 to 1.)
-#' \item popular_pct. Winner's share of popular vote. (Range is 0 to 1.)
-#' \item popular_margin. Winner's point margin in the popular vote.
-#' Can be positive or negative.
-#' \item votes. Total votes cast in the election.
-#' \item margin. Winner's vote margin in the popular vote.
-#' \item runner_up. Runner up candidate.
-#' \item ru_part. Party affiliation of runner up candidate.
-#' \item turnout_pct. Voter turnout as a proportion of eligible
-#' voters. (Rate is 0 to 1.)
-#' \item winner_lname Last name of winner.
-#' \item winner_label Winner's last name and election year.
-#' \item ru_lastname. Runner up's last name.
-#' \item ru_label. Runner up's last name and election year.
-#' \item two_term. Is this a two term presidency? (TRUE/FALSE.) Note
-#' that F.D. Roosevelt was elected four times.
-#' \item ec_votes. Electoral college votes cast for winner.
-#' \item ec_denom. Total number of electoral college votes.
+#' \item election. 첫 번째 미국 대통령 선거부터 계산한 선거 번호입니다.
+#' 1824년은 10번째 선거입니다.
+#' \item year. 연도.
+#' \item winner. 승자의 전체 이름.
+#' \item win_party. 승자의 정당 소속.
+#' \item ec_pct. 승자의 선거인단 투표 득표율.
+#' (범위는 0에서 1까지입니다.)
+#' \item popular_pct. 승자의 대중 투표 득표율. (범위는 0에서 1까지입니다.)
+#' \item popular_margin. 승자의 대중 투표 득표 차이(포인트).
+#' 양수 또는 음수일 수 있습니다.
+#' \item votes. 선거에서 총 투표 수.
+#' \item margin. 승자의 대중 투표 득표 차이.
+#' \item runner_up. 차점자 후보.
+#' \item ru_part. 차점자 후보의 정당 소속.
+#' \item turnout_pct. 유권자 투표율(유효 유권자 대비).
+#' (비율은 0에서 1까지입니다.)
+#' \item winner_lname 승자의 성.
+#' \item winner_label 승자의 성과 선거 연도.
+#' \item ru_lastname. 차점자의 성.
+#' \item ru_label. 차점자의 성과 선거 연도.
+#' \item two_term. 이것은 2임기 대통령직입니까? (TRUE/FALSE.)
+#' F.D. 루스벨트는 4번 당선되었습니다.
+#' \item ec_votes. 승자에게 투표된 선거인단 투표 수.
+#' \item ec_denom. 총 선거인단 투표 수.
 #' }
 #'
 #' @docType data
 #' @keywords datasets
 #' @name elections_historic
-#' @format A (tibble) data frame with 237 rows and 21 variables.
+#' @format 237개 행과 21개 변수가 있는 (tibble) 데이터 프레임입니다.
 #' @source https://en.wikipedia.org/wiki/List_of_United_States_presidential_elections_by_popular_vote_margin.
 "elections_historic"
 
-#' Organ donation in the OECD
+#' OECD의 장기 기증
 #'
-#' A dataset containing data on rates of organ donation for seventeen OECD
-#'  countries between 1991 and 2002. The variables are as follows:
+#' 1991년부터 2002년까지 17개 OECD 국가의 장기 기증률에 대한 데이터 세트입니다.
+#'  변수는 다음과 같습니다.
 #'
 #' \itemize{
-#' \item country. Country name.
-#' \item year. Year.
-#' \item donors. Organ Donation rate per million population.
-#' \item pop. Population in thousands.
-#' \item pop_dens. Population density per square mile.
-#' \item gdp. Gross Domestic Product in thousands of PPP dollars.
-#' \item gdp_lag. Lagged Gross Domestic Product in thousands of PPP dollars.
-#' \item health. Health spending, thousands of PPP dollars per capita.
-#' \item health_lag Lagged health spending, thousands of PPP dollars
-#' per capita.
-#' \item pubhealth. Public health spending as a percentage of total expenditure.
-#' \item roads. Road accident fatalities per 100,000 population.
-#' \item cerebvas. Cerebrovascular deaths per 100,000 population (rounded).
-#' \item assault. Assault deaths per 100,000 population (rounded).
-#' \item external. Deaths due to external causes per 100,000 population.
-#' \item txp_pop. Transplant programs per million population.
-#' \item world. Welfare state world (Esping Andersen.)
-#' \item opt. Opt-in policy or Opt-out policy.
-#' \item consent_law. Consent law, informed or presumed.
-#' \item consent_practice. Consent practice, informed or presumed.
-#' \item consistent. Law consistent with practice, yes or no.
-#' \item ccode. Abbreviated country code.
+#' \item country. 국가 이름.
+#' \item year. 연도.
+#' \item donors. 인구 백만 명당 장기 기증률.
+#' \item pop. 인구(천 명).
+#' \item pop_dens. 평방 마일당 인구 밀도.
+#' \item gdp. PPP 달러 기준 국내 총생산(천 달러).
+#' \item gdp_lag. PPP 달러 기준 지연된 국내 총생산(천 달러).
+#' \item health. 1인당 의료비(PPP 달러 기준 천 달러).
+#' \item health_lag 지연된 1인당 의료비(PPP 달러 기준 천 달러).
+#' \item pubhealth. 총 지출 대비 공공 의료비 비율.
+#' \item roads. 인구 10만 명당 도로 교통사고 사망자 수.
+#' \item cerebvas. 인구 10만 명당 뇌혈관 질환 사망자 수(반올림).
+#' \item assault. 인구 10만 명당 폭행 사망자 수(반올림).
+#' \item external. 인구 10만 명당 외인사 사망자 수.
+#' \item txp_pop. 인구 백만 명당 이식 프로그램 수.
+#' \item world. 복지 국가 세계(Esping Andersen).
+#' \item opt. 옵트인 정책 또는 옵트아웃 정책.
+#' \item consent_law. 동의법, 정보 제공 또는 추정.
+#' \item consent_practice. 동의 관행, 정보 제공 또는 추정.
+#' \item consistent. 법과 관행의 일치 여부, 예 또는 아니오.
+#' \item ccode. 약칭 국가 코드.
 #' }
 #'
 #' @docType data
 #' @keywords datasets
 #' @name organdata
-#' @format A (tibble) data frame with 237 rows and 21 variables.
-#' @source Macro-economic and spending data: OECD. Other data: Kieran Healy.
+#' @format 237개 행과 21개 변수가 있는 (tibble) 데이터 프레임입니다.
+#' @source 거시 경제 및 지출 데이터: OECD. 기타 데이터: Kieran Healy.
 "organdata"
 
 
-#' Dates in character form
+#' 문자 형태의 날짜
 #'
-#' A table of dates and observations with the date column stored as a
-#' character string.
+#' 날짜 열이 문자열로 저장된 날짜 및 관찰값 표입니다.
 #'
 #' @docType data
 #' @keywords datasets
 #' @name bad_date
-#' @format A tibble with 10 rows and two columns.
+#' @format 10개 행과 2개 열이 있는 tibble입니다.
 #' @source Chris Delcher.
 "bad_date"
 
 
-#' An untidy table of data
+#' 정리되지 않은 데이터 표
 #'
-#' A table of data from Wickham (2014).
+#' Wickham(2014)의 데이터 표입니다.
 #'
 #' @docType data
 #' @keywords datasets
 #' @name preg
-#' @format A tbl_df with 3 rows and 3 columns.
+#' @format 3개 행과 3개 열이 있는 tbl_df입니다.
 #' @source Hadley Wickham (2014).
 "preg"
 
 
-#' A wider table of untidy data
+#' 더 넓은 정리되지 않은 데이터 표
 #'
-#' A second table of data from Wickham (2014).
+#' Wickham(2014)의 두 번째 데이터 표입니다.
 #'
 #' @docType data
 #' @keywords datasets
 #' @name preg2
-#' @format An object of class \\code{tbl_df} (inherits from \\code{tbl}, \\code{data.frame}) with 2 rows and 4 columns.
+#' @format 2개 행과 4개 열이 있는 \\code{tbl_df} 클래스( \\code{tbl}, \\code{data.frame}에서 상속)의 객체입니다.
 #' @source Hadley Wickham (2014).
 "preg2"
 
-##' A table of survival rates from the Titanic
+##' 타이타닉호의 생존율 표
 ##'
-##' A small table of survival rates from the Titanic, by sex
+##' 타이타닉호의 성별 생존율을 나타내는 작은 표입니다.
 ##'
 ##' @docType data
 ##' @keywords datasets
 ##' @name titanic
-##' @format A data frame with four rows and four columns.
-##' @source Titanic data
+##' @format 4개 행과 4개 열이 있는 데이터 프레임입니다.
+##' @source 타이타닉 데이터
 "titanic"
 
 
-##' A table of hex color values related to types of color blindness
+##' 색맹 유형과 관련된 16진수 색상 값 표
 ##'
-##' Hex values for five default ggplot colors, with corresponding
-##' approximations for three kinds of color blindness. Produced by the
-##' `dichromat` package.
+##' 5가지 기본 ggplot 색상의 16진수 값과 세 가지 종류의 색맹에 대한
+##' 해당 근사값입니다. `dichromat` 패키지로 생성되었습니다.
 ##'
 ##' @docType data
 ##' @keywords datasets
 ##' @name color_table
-##' @format A tibble with five rows and four columns.
+##' @format 5개 행과 4개 열이 있는 tibble입니다.
 ##' @source Kieran Healy
 "color_table"
 
-##' Years of school completed by people 25 years and over in the US.
+##' 미국 25세 이상 인구의 학교 교육 이수 연수.
 ##'
-##' Counts of educational attainment (in thousands) from 1940 to 2016
+##' 1940년부터 2016년까지의 교육 수준별 인구 수(천 명)
 ##'
-##' The variables are as follows:
+##' 변수는 다음과 같습니다.
 ##' \itemize{
-##' \item age Character. Cut into 25-34, 35-54, 55>
-##' \item sex Character. Male, Female.
-##' \item year Integer.
-##' \item total Integer. Total in thousands.
-##' \item elem4 Double. 0 to 4 years of Elementary School completed.
-##' \item elem8 Double. 5 to 8 years of Elementary School completed.
-##' \item hs3 Double. 1 to 3 years of High School completed.
-##' \item hs4 Double. 4 years of High School completed.
-##' \item coll3 Double. 1 to 3 years of College completed.
-##' \item coll4 Double. 4 or more years of College completed.
-##' \item median Double. Median years of education.
+##' \item age 문자. 25-34세, 35-54세, 55세 이상으로 구분.
+##' \item sex 문자. 남성, 여성.
+##' \item year 정수.
+##' \item total 정수. 총계(천 명).
+##' \item elem4 실수. 초등학교 0~4년 이수.
+##' \item elem8 실수. 초등학교 5~8년 이수.
+##' \item hs3 실수. 고등학교 1~3년 이수.
+##' \item hs4 실수. 고등학교 4년 이수.
+##' \item coll3 실수. 대학교 1~3년 이수.
+##' \item coll4 실수. 대학교 4년 이상 이수.
+##' \item median 실수. 교육 연수 중앙값.
 ##'}
 ##'
 ##' @docType data
 ##' @keywords datasets
 ##' @name edu
-##' @format A tibble with 366 rows and 11 columns.
-##' @source US Census Bureau
+##' @format 366개 행과 11개 열이 있는 tibble입니다.
+##' @source 미국 인구 조사국
 "edu"
 
 
 
-##' Mauna Loa Atmospheric CO2 Concentration
+##' 마우나로아 대기 CO2 농도
 ##'
-##' A subset of the co2 data in base R's [datasets] package, in
-##' a ggplot2-friendly format.
+##' 기본 R의 [datasets] 패키지에 있는 co2 데이터의 하위 집합으로,
+##' ggplot2 친화적인 형식입니다.
 ##'
 ##' @docType data
 ##' @keywords datasets
 ##' @name maunaloa
-##' @format A data frame with 4 columns and 271 rows.
-##' @source R base datasets; Cleveland (1993).
+##' @format 4개 열과 271개 행이 있는 데이터 프레임입니다.
+##' @source R 기본 데이터 세트; Cleveland (1993).
 "maunaloa"
 
 
-##' Monetary Base and S&P 500 series
+##' 통화량 및 S&P 500 시리즈
 ##'
-##' Two time series of financial data from FRED, the _i means indexed
-##' to 100 in the base observation.
+##' FRED의 두 가지 금융 데이터 시계열로, _i는 기본 관찰에서 100으로
+##' 인덱싱되었음을 의미합니다.
 ##'
 ##' @docType data
 ##' @keywords datasets
 ##' @name fredts
-##' @format A data frame with 5 columns and 357 rows.
-##' @source FRED data.
+##' @format 5개 열과 357개 행이 있는 데이터 프레임입니다.
+##' @source FRED 데이터.
 "fredts"
 
 
 
-##' Yahoo Revenue and Employees
+##' 야후 수익 및 직원 수
 ##'
-##' Data on Revenue and Employees at Yahoo before and during Marissa
-##' Mayer's tenure as CEO.
+##' 마리사 메이어가 CEO로 재직하기 전과 재직 중 야후의 수익 및 직원 수 데이터입니다.
 ##'
 ##' @docType data
 ##' @keywords datasets
 ##' @name yahoo
-##' @format A tibble with 4 columns and 12 rows.
+##' @format 4개 열과 12개 행이 있는 tibble입니다.
 ##' @source QZ.com
 "yahoo"
 
 
-##' Student debt data
+##' 학자금 대출 데이터
 ##'
-##' Outstanding student debts in 2016 across 8 income categories, by
-##' percent of all borrowers and percent of all balances.
+##' 2016년 8개 소득 범주에 걸친 미상환 학자금 대출액(모든 대출자의 비율 및
+##' 모든 잔액의 비율 기준).
 ##'
 ##' @docType data
 ##' @keywords datasets
 ##' @name studebt
-##' @format A tibble with 16 rows and 4 columns.
-##' @source Federal Reserve Bank of New York
+##' @format 16개 행과 4개 열이 있는 tibble입니다.
+##' @source 뉴욕 연방 준비 은행
 "studebt"
 
 
-##' American Sociological Association Section Membership
+##' 미국 사회학회 분과 회원 현황
 ##'
-##' Membership (2005-2015) and some financial information for sections
-##' of the American Sociolgical Association
+##' 미국 사회학회 분과의 회원 현황(2005-2015) 및 일부 재정 정보입니다.
 ##'
 ##'
 ##' @docType data
 ##' @keywords datasets
 ##' @name asasec
-##' @format A data frame with 572 rows and 9 columns.
-##' @source ASA Annual Report 2016
+##' @format 572개 행과 9개 열이 있는 데이터 프레임입니다.
+##' @source ASA 연례 보고서 2016
 "asasec"
 
 
-##' Census Data on US Counties
+##' 미국 카운티 인구 조사 데이터
 ##'
-##' Selected county data (including state-level observations on some
-##' variables)
+##' 선택된 카운티 데이터(일부 변수에 대한 주 수준 관찰값 포함)
 ##'
-##' The variables are as follows:
+##' 변수는 다음과 같습니다.
 ##' \itemize{
-##' \item id. FIPS State and County code (character)
-##' \item name. State or County Name
-##' \item state. State abbreviation
-##' \item census_region. Census region
-##' \item pop_dens. Population density per square mile, 2014 estimate
-##' (seven categories).
-##' \item pop_dens4. Population density per square mile, 2014 estimate (quartiles)
-##' \item pop_dens6. Poptulation density per square mile, 2014
-##' estimate (six categories)
-##' \item pct_black. Percent black population, 2014 estimate (seven
-##' category factor)
-##' \item pop. Population, 2014 estimate
-##' \item female. Female persons, percent, 2013
-##' \item white. White alone, percent, 2013
-##' \item black. Black alone, percent, 2013
-##' \item travel_time. Mean travel time to work (minutes), workers age 16+, 2009-2013
-##' \item land_area. Land area in square miles, 2010
-##' \item hh_income. Median household income, 2009-2013
-##' \item su_gun4. Firearm-related suicides per 100,000 population,
-##' 1999-2015. Factor variable cut into quartiles. Note that the
-##' values in this variable contain an inaccurate bottom-quartile
-##' coding by construction. Do not present this variable as an
-##' accurate measure of the firearm-related suicide rate.
-##' \item su_gun6. Firearm-related suicides per 100,000 population,
-##' 1999-2015. Factor variable cut into six categories. Note that the
-##' values in this variable contain an inaccurate bottom-quartile
-##' coding by construction. Do not present this variable as an
-##' accurate measure of the firearm-related suicide rate.
-##' \item fips. FIPS code (integer).
-##' \item votes_dem_2016. Provisional count of Democratic votes in the
-##' 2016 Presidential election.
-##' \item votes_gop_2016. Provisional count of Republican votes in the
-##' 2016 Presidential election.
-##' \item total_votes_2016. Provitional count of votes cast in the
-##' 2016 Presidential election.
-##' \item per_dem_2016. Democratic Presidential vote, percent.
-##' \item per_gop_2016. Republican Presidental vote, percent.
-##' \item diff_2016. Difference between Democratic and Republican
-##' Presidental vote.
-##' \item votes_dem_2012. Provisional count of Democratic votes in the
-##' 2012 Presidential election.
-##' \item votes_gop_2012. Provisional count of Republican votes in the
-##' 2012 Presidential election.
-##' \item total_votes_2012. Provitional count of votes cast in the
-##' 2012 Presidential election.
-##' \item per_dem_2012. Democratic Presidential vote, percent.
-##' \item per_gop_2012. Republican Presidental vote, percent.
-##' \item diff_2012. Difference between Democratic and Republican
-##' Presidental vote.
-##' \item winner. Winning candidate, 2016 Presidental Election.
-##' \item partywinner16. Winning party, 2016 Presidental Election.
-##' \item winner12. Winning candidate, 2012 Presidental Election.
-##' \item partywinner12. Winning party, 2012 Presidental Election.
-##' \item fipped. Did the area flip parties from 2012 to 2016.
+##' \item id. FIPS 주 및 카운티 코드(문자)
+##' \item name. 주 또는 카운티 이름
+##' \item state. 주 약어
+##' \item census_region. 인구 조사 지역
+##' \item pop_dens. 평방 마일당 인구 밀도, 2014년 추정치
+##' (7개 범주).
+##' \item pop_dens4. 평방 마일당 인구 밀도, 2014년 추정치 (사분위수)
+##' \item pop_dens6. 평방 마일당 인구 밀도, 2014년
+##' 추정치 (6개 범주)
+##' \item pct_black. 흑인 인구 비율, 2014년 추정치 (7개
+##' 범주 요인)
+##' \item pop. 인구, 2014년 추정치
+##' \item female. 여성 인구 비율, 2013년
+##' \item white. 백인 단독, 비율, 2013년
+##' \item black. 흑인 단독, 비율, 2013년
+##' \item travel_time. 직장까지 평균 통근 시간(분), 16세 이상 근로자, 2009-2013년
+##' \item land_area. 평방 마일 단위 육지 면적, 2010년
+##' \item hh_income. 가구 소득 중앙값, 2009-2013년
+##' \item su_gun4. 인구 10만 명당 총기 관련 자살 건수,
+##' 1999-2015년. 사분위수로 구분된 요인 변수입니다. 이 변수의 값에는
+##' 구성상 부정확한 하위 사분위수 코딩이 포함되어 있습니다. 이 변수를
+##' 총기 관련 자살률의 정확한 측정치로 제시하지 마십시오.
+##' \item su_gun6. 인구 10만 명당 총기 관련 자살 건수,
+##' 1999-2015년. 6개 범주로 구분된 요인 변수입니다. 이 변수의 값에는
+##' 구성상 부정확한 하위 사분위수 코딩이 포함되어 있습니다. 이 변수를
+##' 총기 관련 자살률의 정확한 측정치로 제시하지 마십시오.
+##' \item fips. FIPS 코드(정수).
+##' \item votes_dem_2016. 2016년 대통령 선거 민주당 잠정 득표 수.
+##' \item votes_gop_2016. 2016년 대통령 선거 공화당 잠정 득표 수.
+##' \item total_votes_2016. 2016년 대통령 선거 잠정 총 투표 수.
+##' \item per_dem_2016. 민주당 대통령 득표율.
+##' \item per_gop_2016. 공화당 대통령 득표율.
+##' \item diff_2016. 민주당과 공화당 대통령 득표 차이.
+##' \item votes_dem_2012. 2012년 대통령 선거 민주당 잠정 득표 수.
+##' \item votes_gop_2012. 2012년 대통령 선거 공화당 잠정 득표 수.
+##' \item total_votes_2012. 2012년 대통령 선거 잠정 총 투표 수.
+##' \item per_dem_2012. 민주당 대통령 득표율.
+##' \item per_gop_2012. 공화당 대통령 득표율.
+##' \item diff_2012. 민주당과 공화당 대통령 득표 차이.
+##' \item winner. 2016년 대통령 선거 당선자.
+##' \item partywinner16. 2016년 대통령 선거 당선 정당.
+##' \item winner12. 2012년 대통령 선거 당선자.
+##' \item partywinner12. 2012년 대통령 선거 당선 정당.
+##' \item fipped. 2012년에서 2016년 사이에 해당 지역의 정당이 바뀌었습니까?
 ##' }
 ##'
 ##' @docType data
 ##' @keywords datasets
 ##' @name county_data
-##' @format A data frame with 3195 rows and 13 columns.
-##' @source US Census Bureau, Centers for Disease Control
+##' @format 3195개 행과 13개 열이 있는 데이터 프레임입니다.
+##' @source 미국 인구 조사국, 질병 통제 예방 센터
 "county_data"
 
 
-##' US County map file
+##' 미국 카운티 지도 파일
 ##'
-##' US county map data
+##' 미국 카운티 지도 데이터
 ##'
 ##' \itemize{
-##' \item long. Longitude
-##' \item lat. Latitude
-##' \item order. Order
-##' \item hole. Hole (true/false)
-##' \item piece. Piece
-##' \item group. Group
-##' \item id. FIPS code
+##' \item long. 경도
+##' \item lat. 위도
+##' \item order. 순서
+##' \item hole. 구멍 (참/거짓)
+##' \item piece. 조각
+##' \item group. 그룹
+##' \item id. FIPS 코드
 ##' }
 ##'
 ##' @docType data
 ##' @keywords datasets
 ##' @name county_map
-##' @format A data frame with 191,372 rows and 7 columns.
+##' @format 191,372개 행과 7개 열이 있는 데이터 프레임입니다.
 ##' @source Eric Celeste
 "county_map"
 
 
 
-##' Opiate-Related Deaths in the United States, 1999-2014
+##' 미국 내 아편 관련 사망자 수, 1999-2014년
 ##'
-##' State-level data on optiate related deaths in the US, from the CDC
-##' Wonder database. Query details: Dataset is Multiple causes of
-##' death, 1999-2014; 2006 Urbanization; Autopsy, Gender, Place of
-##' Death, States, 10-year age groups, and Hisipanic Origin, Weekday,
-##' Year/Month set to ALL. Standard Population 2000 US Std Population.
-##' Default intercensal populations for years 2001-2009 except Infant
-##' age groups. Rates per 100,000 population.
-##' MCD ICD-10 Codes selected: T40.0 (Opium), T40.1 (Heroin), T40.2
-##' (Other opioids), T40.3 (Methadone), T40.4 (Other synthetic
-##' narcotics), T40.6 (Other and unspecified narcotics). UCD - ICD-10
-##' Codes selected: X40-X44, X60-X64, X85, Y10-Y14.
+##' CDC Wonder 데이터베이스의 미국 내 아편 관련 사망자 수에 대한 주별 데이터입니다.
+##' 쿼리 세부 정보: 데이터 세트는 1999-2014년 복수 원인 사망입니다. 2006년 도시화;
+##' 부검, 성별, 사망 장소, 주, 10세 연령 그룹 및 히스패닉계, 요일,
+##' 연도/월은 모두 ALL로 설정됩니다. 표준 인구 2000년 미국 표준 인구.
+##' 유아 연령 그룹을 제외한 2001-2009년의 기본 연간 인구.
+##' 인구 10만 명당 비율.
+##' MCD ICD-10 코드 선택: T40.0(아편), T40.1(헤로인), T40.2
+##' (기타 아편유사제), T40.3(메타돈), T40.4(기타 합성 마약),
+##' T40.6(기타 및 미지정 마약). UCD - ICD-10 코드 선택: X40-X44, X60-X64, X85, Y10-Y14.
 ##'
-##' The variables are as follows:
+##' 변수는 다음과 같습니다.
 ##'
 ##' \itemize{
-##' \item year. Year
-##' \item state. State name.
-##' \item fips. State FIPS code.
-##' \item deaths. Number of opiate-related deaths.
-##' \item population. Population.
-##' \item crude. Crude death rate.
-##' \item adjusted. Adjusted death rate.
-##' \item adjusted.se. Standard error of Adjusted death rate.
-##' \item region. Census region. (Stored as an ordered factor.)
-##' \item abbr. Abbreviated state name.
-##' \item division_name. Census Division. (Character.)
+##' \item year. 연도
+##' \item state. 주 이름.
+##' \item fips. 주 FIPS 코드.
+##' \item deaths. 아편 관련 사망자 수.
+##' \item population. 인구.
+##' \item crude. 조악 사망률.
+##' \item adjusted. 조정 사망률.
+##' \item adjusted.se. 조정 사망률의 표준 오차.
+##' \item region. 인구 조사 지역. (순서형 요인으로 저장됨)
+##' \item abbr. 약칭 주 이름.
+##' \item division_name. 인구 조사국. (문자)
 ##' }
 ##'
 ##' @docType data
 ##' @keywords datasets
 ##' @name opiates
-##' @format A tibble with 800 rows and 10 columns.
-##' @source Centers for Disease Control CDC WONDER data
+##' @format 800개 행과 10개 열이 있는 tibble입니다.
+##' @source 질병 통제 예방 센터 CDC WONDER 데이터
 "opiates"
 
 
-##' US Law School Enrollments 1963-2015
+##' 미국 로스쿨 등록 현황 1963-2015년
 ##'
-##' Annual enrollments in US Law Schools.
+##' 미국 로스쿨 연간 등록 현황.
 ##'
-##' The variables are as follows:
+##' 변수는 다음과 같습니다.
 ##' \itemize{
-##' \item  ay. Academic year. character.
-##' \item  year. Year. integer.
-##' \item  n_schools. Number of law schools. integer.
-##' \item  fy_enrollment. First year enrollment. integer.
-##' \item  fy_male. First year enrollment, men. integer.
-##' \item  fy_female. First year enrollment, women. integer.
-##' \item  jd_total. Total JD enrollment. integer.
-##' \item  jd_male. Total JD enrollment, men. integer.
-##' \item  jd_female. Total JD enrollment, women. integer.
-##' \item  tot_enrolled. Total enrolled. integer.
-##' \item  jd_llb_awarded. JD/LLB degrees awarded. integer.
+##' \item  ay. 학년도. 문자.
+##' \item  year. 연도. 정수.
+##' \item  n_schools. 로스쿨 수. 정수.
+##' \item  fy_enrollment. 1학년 등록자 수. 정수.
+##' \item  fy_male. 1학년 남성 등록자 수. 정수.
+##' \item  fy_female. 1학년 여성 등록자 수. 정수.
+##' \item  jd_total. 총 JD 등록자 수. 정수.
+##' \item  jd_male. 총 JD 남성 등록자 수. 정수.
+##' \item  jd_female. 총 JD 여성 등록자 수. 정수.
+##' \item  tot_enrolled. 총 등록자 수. 정수.
+##' \item  jd_llb_awarded. JD/LLB 학위 수여 건수. 정수.
 ##' }
 ##'
 ##' @docType data
 ##' @keywords datasets
 ##' @name lawschools
-##' @format A tibble with 53 rows and 11 columns.
-##' @source American Bar Association
+##' @format 53개 행과 11개 열이 있는 tibble입니다.
+##' @source 미국 변호사 협회
 "lawschools"
 
-##' Life Expectancy in the OECD, 1960-2015.
+##' OECD 기대 수명, 1960-2015년.
 ##'
-##' Life expectancy data for individual countries.
+##' 개별 국가의 기대 수명 데이터.
 ##'
-##' The variables are as follows:
+##' 변수는 다음과 같습니다.
 ##' \itemize{
-##' \item  country. Country. (Character)
-##' \item  year. Year. (Integer.)
-##' \item  lifeexp. Life Expectancy at Birth, measured in years.
-##' \item  is_usa. Indicator for USA or Other country.
+##' \item  country. 국가. (문자)
+##' \item  year. 연도. (정수)
+##' \item  lifeexp. 출생 시 기대 수명(연 단위).
+##' \item  is_usa. 미국 또는 기타 국가 표시기.
 ##' }
 ##'
 ##' @docType data
 ##' @keywords datasets
 ##' @name oecd_le
-##' @format A tibble with 1,746 rows and 4 columns.
+##' @format 1,746개 행과 4개 열이 있는 tibble입니다.
 ##' @source OECD
 "oecd_le"
 
 
-##' Life Expectancy in the OECD, 1960-2015
+##' OECD 기대 수명, 1960-2015년
 ##'
-##' Life expectancy data summary table.
+##' 기대 수명 데이터 요약표.
 ##'
-##' The variables are as follows:
+##' 변수는 다음과 같습니다.
 ##' \itemize{
-##' \item  year. Year. (Integer.)
-##' \item  other. Life Expectancy at birth in OECD countries excluding
-##' the USA. Measured in years.
-##' \item usa. Life Expectancy at birth in the USA. Measured in years.
-##' \item  diff. Difference between usa and other.
-##' \item hi_lo. Is usa above or below the oecd average?
+##' \item  year. 연도. (정수)
+##' \item  other. 미국을 제외한 OECD 국가의 출생 시 기대 수명.
+##' 연 단위로 측정됩니다.
+##' \item usa. 미국의 출생 시 기대 수명. 연 단위로 측정됩니다.
+##' \item  diff. 미국과 기타 국가 간의 차이.
+##' \item hi_lo. 미국이 OECD 평균보다 높습니까, 낮습니까?
 ##' }
 ##'
 ##' @docType data
 ##' @keywords datasets
 ##' @name oecd_sum
-##' @format A tibble with 57 rows and 5 columns.
+##' @format 57개 행과 5개 열이 있는 tibble입니다.
 ##' @source OECD
 "oecd_sum"
 
 
-##' Monthly Births in the US, and England & Wales
+##' 미국 및 잉글랜드 & 웨일스의 월별 출생아 수
 ##'
-##' Births by month, 1933-2015 (United States) and 1938-1991 (England
-##' & Wales)
+##' 월별 출생아 수, 1933-2015년(미국) 및 1938-1991년(잉글랜드
+##' & 웨일스)
 ##'
-##' The variables are as follows:
+##' 변수는 다음과 같습니다.
 ##'
 ##' \itemize{
-##' \item  date. Year and month. (Day is arbitrarily set to 01 for all observations,
-##' data are monthly.)
-##' \item  month. Month of the year (1-12).
-##' \item n_days. The number of days in a given month/year date.
-##' \item births. Total live births for that month.
-##' \item  total_pop. National population estimate for that month.
-##' \item country. United States or England & Wales.
+##' \item  date. 연도 및 월. (모든 관찰값에 대해 날짜는 임의로 01로 설정되며,
+##' 데이터는 월별입니다.)
+##' \item  month. 해당 연도의 월(1-12).
+##' \item n_days. 특정 월/연도 날짜의 일 수.
+##' \item births. 해당 월의 총 출생아 수.
+##' \item  total_pop. 해당 월의 국가 인구 추정치.
+##' \item country. 미국 또는 잉글랜드 & 웨일스.
 ##' }
 ##'
 ##' @docType data
 ##' @keywords datasets
 ##' @name boomer
-##' @format A tibble with 1,644 rows and 6 columns.
-##' @source UK Office of National Statistics; US Census Bureau.
+##' @format 1,644개 행과 6개 열이 있는 tibble입니다.
+##' @source 영국 통계청; 미국 인구 조사국.
 "boomer"

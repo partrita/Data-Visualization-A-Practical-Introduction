@@ -1,7 +1,7 @@
-citHeader("To cite socviz in publications use:")
+citHeader("출판물에 socviz를 인용하려면 다음을 사용하십시오:")
 
 citEntry(entry = "Book",
-  title        = "Data Visualization: A Practical Introduction",
+  title        = "데이터 시각화: 실용적 입문",
   author       = personList(as.person("Kieran Healy")),
   publisher    = "Princeton University Press",
   address      = "Princeton",
@@ -10,7 +10,7 @@ citEntry(entry = "Book",
 
   textVersion  =
   paste("Kieran Healy (2019).",
-        "Data Visualization: A Practical Introduction.",
+        "데이터 시각화: 실용적 입문.",
         "Princeton University Press.",
         "URL http://socviz.co")
 )
